@@ -14,7 +14,7 @@ class UsernameMemberExtension extends DataExtension{
 	 * More of the first name is added if that username is already taken
 	 */
 	public function generateUsername() {
-		$member = $this->getOwner();	
+		$member = $this->getOwner();
 		$count = 1;
 		do{
 			$username = strtolower(substr($member->FirstName,0,$count).$member->Surname);
@@ -25,7 +25,7 @@ class UsernameMemberExtension extends DataExtension{
 
 		return $username;
 	}
-	
+
 	public function GenerateAndSetPassword() {
 		if(!Permission::check("ADMIN")){
 			return false;
@@ -33,7 +33,7 @@ class UsernameMemberExtension extends DataExtension{
 		$member = $this->getOwner();
 		$password = substr(md5(microtime()),0,6);
 		$member->changePassword($password);
-		
+
 		return $password;
 	}
 

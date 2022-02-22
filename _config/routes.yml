@@ -1,0 +1,9 @@
+---
+Name: auth-username-routes
+After:
+  - '#rootroutes'
+  - '#coreroutes'
+---
+Director:
+  rules:
+    'UsernameSecurity//$Action/$ID/$OtherID': 'UsernameSecurity'

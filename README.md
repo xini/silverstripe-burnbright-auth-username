@@ -5,8 +5,6 @@ It also provides additional functionality for retrieving usernames and password.
 
 ##  Set Up
 
-Copy the module folder to your SilverStripe site's root directory.
-
 The module's _config.php file automatically:
 
  * adds the UsernameAuthenticator to the set of registered authenticators

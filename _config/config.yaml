@@ -1,3 +1,6 @@
+---
+Name: auth-username
+---
 Member:
   unique_identifier_field: Username
   extensions:
