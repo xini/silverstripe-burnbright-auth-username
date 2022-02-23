@@ -113,7 +113,6 @@ class UsernameLoginForm extends MemberLoginForm {
             $first = $members->first();
 
             $e = MemberForgotUsernameEmail::create();
-            $e->populateTemplate($first);
             $e->populateTemplate(array(
                 'Email' => $first->Email,
                 'Members' => $members,
